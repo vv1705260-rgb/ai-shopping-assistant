@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout - Shree Collection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2 style="text-align:center;">💳 Payment</h2>
+
+<div class="payment-box">
+  <h3>Select Payment Method</h3>
+
+  <button onclick="selectMethod('UPI')">UPI</button>
+  <button onclick="selectMethod('Card')">Card</button>
+
+  <div id="payment-form"></div>
+
+  <button onclick="payNow()">Pay Now</button>
+</div>
+
+<script src="checkout.js"></script>
+</body>
+</html>
