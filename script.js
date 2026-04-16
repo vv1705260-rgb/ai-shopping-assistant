@@ -194,3 +194,10 @@ div.innerHTML = `
 message += `%0A🔥 *Best Price Deal Just for You!*`;
 message += `%0A💸 Lower than market price`;
 message += `%0A⚡ Limited stock available`;
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function showWishlist() {
+  alert("Wishlist feature coming soon ❤️");
+}
