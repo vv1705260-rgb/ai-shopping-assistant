@@ -75,3 +75,116 @@ header {
   padding: 10px;
   margin: 10px 0;
 }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee, #e0c3fc);
+  color: #333;
+}
+
+/* 🌌 Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* 🛍️ Product Grid */
+#products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 30px;
+}
+
+/* ✨ Glass Card */
+.card {
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+  transition: all 0.4s ease;
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
+}
+
+/* 🌟 Hover Effect */
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* 🖼️ Image */
+.card img {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.4s;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+}
+
+/* 💖 Button */
+button {
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* 🔥 Discount Zone */
+.discount {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(45deg, #ffecd2, #fcb69f);
+  animation: glow 2s infinite alternate;
+}
+
+/* 🛒 Cart */
+.cart {
+  position: fixed;
+  right: -320px;
+  top: 0;
+  width: 320px;
+  height: 100%;
+  background: white;
+  padding: 20px;
+  transition: 0.4s;
+  box-shadow: -5px 0 20px rgba(0,0,0,0.2);
+}
+
+.cart.active {
+  right: 0;
+}
+
+/* ✨ Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #ff9a9e;
+  }
+  to {
+    box-shadow: 0 0 25px #fad0c4;
+  }
+  }
