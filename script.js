@@ -174,3 +174,20 @@ function addToWishlist(index) {
 }
 <h4 style="color:red;">🔥 20% OFF</h4>
   <h4 style="color:red;">🔥 Save ₹${item.profit}</h4>
+div.innerHTML = `
+  <span class="badge">🔥 Best Price</span>
+
+  <img src="${item.image}" onclick="zoomImage('${item.image}')">
+
+  <h3>${item.name}</h3>
+
+  <p>
+    <span class="old-price">₹${item.originalPrice}</span><br>
+    <span class="price">₹${item.finalPrice}</span>
+  </p>
+
+  <p style="color:green;">💸 Save ₹${item.profit}</p>
+
+  <button onclick="addToCart(${index})">🛒 Add to Cart</button>
+  <button onclick="addToWishlist(${index})">❤️ Wishlist</button>
+`;
