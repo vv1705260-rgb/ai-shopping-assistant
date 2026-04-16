@@ -220,3 +220,9 @@ button:hover {
 button:hover {
   box-shadow: 0 0 15px #ff9a9e;
 }
+.low-price {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(45deg, #d4fc79, #96e6a1);
+  font-weight: bold;
+}
