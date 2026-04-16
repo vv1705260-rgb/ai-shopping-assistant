@@ -201,3 +201,17 @@ function scrollToTop() {
 function showWishlist() {
   alert("Wishlist feature coming soon ❤️");
 }
+div.innerHTML = `
+  <img src="${item.image}" onclick="zoomImage('${item.image}')">
+
+  <h4>${item.name}</h4>
+
+  <p>
+    <span class="old-price">₹${item.originalPrice}</span><br>
+    <span class="price">₹${item.finalPrice}</span>
+  </p>
+
+  <p style="color:green; font-size:12px;">💸 Save ₹${item.profit}</p>
+
+  <button onclick="addToCart(${index})">Add</button>
+`;
