@@ -215,3 +215,4 @@ div.innerHTML = `
 
   <button onclick="addToCart(${index})">Add</button>
 `;
+<button onclick="openQuickView(${index})">👁️ View</button>
