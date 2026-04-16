@@ -29,5 +29,30 @@
   <button onclick="showWishlist()">❤️ Wishlist</button>
   <button onclick="toggleCart()">🛒 Cart</button>
 </div>
+  <div id="quickView" class="modal">
+  <div class="modal-content">
+    <span onclick="closeQuickView()" class="close">&times;</span>
+
+    <img id="qv-image" src="" />
+
+    <h2 id="qv-name"></h2>
+
+    <p>
+      <span id="qv-old" class="old-price"></span><br>
+      <span id="qv-price" class="price"></span>
+    </p>
+
+    <!-- 👗 Size Selection -->
+    <div class="sizes">
+      <p>Select Size:</p>
+      <button onclick="selectSize(this)">S</button>
+      <button onclick="selectSize(this)">M</button>
+      <button onclick="selectSize(this)">L</button>
+      <button onclick="selectSize(this)">XL</button>
+    </div>
+
+    <button onclick="addToCartFromQuickView()">🛒 Add to Cart</button>
+  </div>
+  </div>
 </body>
 </html>
