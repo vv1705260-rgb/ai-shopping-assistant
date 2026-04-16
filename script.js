@@ -191,3 +191,6 @@ div.innerHTML = `
   <button onclick="addToCart(${index})">🛒 Add to Cart</button>
   <button onclick="addToWishlist(${index})">❤️ Wishlist</button>
 `;
+message += `%0A🔥 *Best Price Deal Just for You!*`;
+message += `%0A💸 Lower than market price`;
+message += `%0A⚡ Limited stock available`;
