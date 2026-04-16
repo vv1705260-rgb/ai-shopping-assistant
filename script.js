@@ -127,3 +127,18 @@ function goToCheckout() {
   window.location.href = "checkout.html";
 }
 <div class="stars"></div>
+products.forEach((item, index) => {
+  const div = document.createElement("div");
+  div.classList.add("card");
+
+  div.style.animationDelay = `${index * 0.2}s`; // 👈 smooth stagger
+
+  div.innerHTML = `
+    <img src="${item.image}" onclick="zoomImage('${item.image}')">
+    <h3>${item.name}</h3>
+    <p><del>₹${item.originalPrice}</del> ₹${item.finalPrice}</p>
+    <button onclick="addToCart(${index})">Add to Cart</button>
+  `;
+
+  container.appendChild(div);
+});
