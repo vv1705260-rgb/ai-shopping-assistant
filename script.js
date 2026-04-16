@@ -142,3 +142,23 @@ products.forEach((item, index) => {
 
   container.appendChild(div);
 });
+function orderOnWhatsApp() {
+  let message = "🛍️ *Shree Collection Order* %0A%0A";
+
+  let total = 0;
+
+  cart.forEach((item, index) => {
+    message += `👉 ${item.name} - ₹${item.finalPrice} %0A`;
+    total += item.finalPrice;
+  });
+
+  message += `%0A💰 *Total:* ₹${total}`;
+  message += `%0A🔥 Special Offer Applied!`;
+  message += `%0A📦 Please confirm my order`;
+
+  let phoneNumber = "919845606417"; // 👉 your number
+
+  let url = `https://wa.me/${9845606417}?text=${confirm your orders}`;
+
+  window.open(url, "_blank");
+}
