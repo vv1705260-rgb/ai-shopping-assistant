@@ -162,3 +162,15 @@ function orderOnWhatsApp() {
 
   window.open(url, "_blank");
 }
+message += `%0A🎉 *Limited Time Offer!*`;
+message += `%0A⚡ Low Price – Hurry Up!`;
+message += `%0A💖 Exclusive from Shree Collection`;let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+function addToWishlist(index) {
+  wishlist.push(products[index]);
+  localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+  alert("❤️ Added to Wishlist!");
+}
+<h4 style="color:red;">🔥 20% OFF</h4>
+  <h4 style="color:red;">🔥 Save ₹${item.profit}</h4>
