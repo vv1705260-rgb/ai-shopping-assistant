@@ -10,6 +10,7 @@ header {
   padding: 15px;
   background: black;
   color: white;
+  
 }
 
 #products {
@@ -188,3 +189,34 @@ button:hover {
     box-shadow: 0 0 25px #fad0c4;
   }
   }
+.tagline {
+  font-size: 14px;
+  color: #ff4d6d;
+}
+
+/* 🛍️ Price Style */
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: green;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 14px;
+}
+
+/* 🔥 Badge */
+.badge {
+  background: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+button:hover {
+  box-shadow: 0 0 15px #ff9a9e;
+}
