@@ -216,3 +216,46 @@ div.innerHTML = `
   <button onclick="addToCart(${index})">Add</button>
 `;
 <button onclick="openQuickView(${index})">👁️ View</button>
+function addToCartFromQuickView() {
+  if (!selectedSize) {
+    alert("Please select size");
+    return;
+  }
+
+  const item = {
+    ...selectedProduct,
+    size: selectedSize
+  };
+
+  cart.push(item);
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  updateCart();
+  closeQuickView();
+
+  alert("Added to cart with size " + selectedSize);
+}
+function selectSize(btn) {
+  document.querySelectorAll(".sizes button").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+
+  selectedSize = btn.innerText;
+}
+let selectedProduct = null;
+let selectedSize = "";
+
+function openQuickView(index) {
+  const product = products[index];
+  selectedProduct = product;
+
+  document.getElementById("qv-image").src = product.image;
+  document.getElementById("qv-name").innerText = product.name;
+  document.getElementById("qv-old").innerText = "₹" + product.originalPrice;
+  document.getElementById("qv-price").innerText = "₹" + product.finalPrice;
+
+  document.getElementById("quickView").style.display = "block";
+}
+
+function closeQuickView() {
+  document.getElementById("quickView").style.display = "none";
+}
