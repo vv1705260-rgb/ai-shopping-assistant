@@ -123,3 +123,6 @@ function zoomImage(src) {
 
 displayProducts();
 updateCart();
+function goToCheckout() {
+  window.location.href = "checkout.html";
+}
