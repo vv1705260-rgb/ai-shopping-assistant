@@ -126,3 +126,4 @@ updateCart();
 function goToCheckout() {
   window.location.href = "checkout.html";
 }
+<div class="stars"></div>
